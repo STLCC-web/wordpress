@@ -14,3 +14,9 @@ http://wordpress.stackexchange.com/questions/143402/linking-together-two-differe
 CREATE PAGES AT THEME INSTALL TIME:
 
 https://developer.wordpress.org/reference/functions/wp_insert_post/
+
+Custom Welcome Splash
+http://www.wpexplorer.com/custom-wordpress-welcome-message/
+
+DASHICON PICKER
+https://developer.wordpress.org/resource/dashicons/#admin-comments
