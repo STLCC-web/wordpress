@@ -22,16 +22,18 @@ get_header(); ?>
 		<p>JACOPO WAS HERE?</p>
 
 			<?php
-			$args = array('post_type' => 'faculty', 'post_per_page' => 50 );
+			$args = array('post_type' => 'faculty' );
 			$loop = new WP_Query($args);
 			
 			while ( $loop->have_posts() ) : $loop->the_post();
 
-				get_template_part( 'content', 'archive' );
-
+				//$loop
+				//get_template_part( 'content', 'archive' );
 
 			endwhile; // End of the loop.
+			
 			?>
+			
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
