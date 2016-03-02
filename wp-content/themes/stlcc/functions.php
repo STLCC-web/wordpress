@@ -199,10 +199,32 @@ function stlcc_faculty_post_type() {
 add_action('init', 'stlcc_faculty_post_type');
 
 /**
+ * FIXME: CHECK IMPLEMENTATION BEFORE LIVE VERSION IS RUN. D-D-D-DANGER!!!
+ * Removing Elements for specific Roles
+ * as seen here:  http://www.wpmayor.com/how-to-remove-menu-items-in-admin-depending-on-user-role/
+ */
+ /*
+function posts_for_current_contributor() {
+    global $user_ID;
+ 
+    if ( current_user_can( 'contributor' ) ) {
+       if ( ! isset( $_GET['author'] ) ) {
+          wp_redirect( add_query_arg( 'author', $user_ID ) );
+          exit;
+       }
+   }
+}
+// CHECK HOOK BEFORE ENABLING!!!! 
+ add_action( 'load-edit.php', 'posts_for_current_contributor' );
+*/
+	
+/**
  *
  * Removing Element from Dashboard Menu
  */
  
+ add_action( 'admin_menu', 'stlcc_menu_page_removing' );
+
  function stlcc_menu_page_removing() {
  
      remove_menu_page( 'edit-comments.php' );          //Comments
@@ -220,7 +242,6 @@ add_action('init', 'stlcc_faculty_post_type');
     */
 }
 
-add_action( 'admin_menu', 'stlcc_menu_page_removing' );
  
  
 /**
