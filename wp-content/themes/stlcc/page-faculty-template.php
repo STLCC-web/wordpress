@@ -19,7 +19,6 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		<p>JACOPO WAS HERE?</p>
 
 			<?php
 			$args = array('post_type' => 'faculty' );
@@ -28,7 +27,7 @@ get_header(); ?>
 			while ( $loop->have_posts() ) : $loop->the_post();
 
 				//$loop
-				//get_template_part( 'content', 'archive' );
+				get_template_part( 'content', 'archive' );
 
 			endwhile; // End of the loop.
 			
