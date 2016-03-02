@@ -25,11 +25,38 @@
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
-
+	<!--
+		<?php if( has_post_thumbnail() ): ?>
+		
+			<div class="col-xs-12 col-sm-4">
+				<div class="thumbnail"><?php the_post_thumbnail('medium'); ?></div>
+			</div>
+			<div class="col-xs-12 col-sm-8">
+				<?php the_excerpt(); ?>
+			</div>
+		
+		<?php else: ?>
+		
+			<div class="col-xs-12">
+				<?php the_excerpt(); ?>
+			</div>
+		
+		<?php endif; ?>
+ 
+		
+	-->
 	<div class="entry-content">
 		<?php
+			if( has_post_thumbnail() ):
+			?>
+			
+			<div class="thumbnail-image">
+				<div class="thumbnail"><?php the_post_thumbnail('medium'); ?></div>
+			</div>
+
+			<?php endif; 
+				
 			the_content( sprintf(
-				/* translators: %s: Name of current post. */
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'stlcc' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
