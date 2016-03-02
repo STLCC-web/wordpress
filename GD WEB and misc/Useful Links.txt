@@ -1,0 +1,16 @@
+useful links:
+
+http://www.makeuseof.com/tag/product-review-database-wordpress-custom-post-types-custom-fields-featured-images-widgets/
+
+https://github.com/michael-cannon/aihrus-framework
+
+http://www.makeuseof.com/tag/working-custom-database-tables-wordpress/
+
+https://www.youtube.com/watch?v=vSM7w3zzlSU
+
+link cpt:
+http://wordpress.stackexchange.com/questions/143402/linking-together-two-different-custom-post-types
+
+CREATE PAGES AT THEME INSTALL TIME:
+
+https://developer.wordpress.org/reference/functions/wp_insert_post/
