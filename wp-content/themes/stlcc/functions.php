@@ -198,32 +198,29 @@ function stlcc_faculty_post_type() {
 
 add_action('init', 'stlcc_faculty_post_type');
 
+
 /**
- * FIXME: CHECK IMPLEMENTATION BEFORE LIVE VERSION IS RUN. D-D-D-DANGER!!!
- * Removing Elements for specific Roles
+ * Removing Elements from menu for specific Roles
  * as seen here:  http://www.wpmayor.com/how-to-remove-menu-items-in-admin-depending-on-user-role/
  */
- /*
-function posts_for_current_contributor() {
+ 
+	 
+function stlcc_posts_for_current_contributor() {
+    
     global $user_ID;
  
     if ( current_user_can( 'contributor' ) ) {
-       if ( ! isset( $_GET['author'] ) ) {
-          wp_redirect( add_query_arg( 'author', $user_ID ) );
-          exit;
-       }
-   }
+	    //remove_menu_page( 'index.php' ); //Dashboard
+    }
 }
-// CHECK HOOK BEFORE ENABLING!!!! 
- add_action( 'load-edit.php', 'posts_for_current_contributor' );
-*/
+ add_action( 'admin_menu', 'stlcc_posts_for_current_contributor' );
 	
 /**
  *
  * Removing Element from Dashboard Menu
  */
  
- add_action( 'admin_menu', 'stlcc_menu_page_removing' );
+ //add_action( 'admin_menu', 'stlcc_menu_page_removing' );
 
  function stlcc_menu_page_removing() {
  
@@ -242,11 +239,46 @@ function posts_for_current_contributor() {
     */
 }
 
+
+/*
+	*
+	* Nuova rimuovi commenti
+	*/
  
+add_action( 'admin_menu', 'stlcc_remove',9999 );	// do this as late as possible
+function stlcc_remove() {
+	 filter_admin_menu();
+	 filter_dashboard();
+	 hide_dashboard_bits();
+ }
+ 
+ 
+ 
+function filter_admin_menu(){
+	global $pagenow;
+
+	if ( $pagenow == 'comment.php' || $pagenow == 'edit-comments.php' || $pagenow == 'options-discussion.php' )
+		wp_die( __( 'Comments are closed.' ), '', array( 'response' => 403 ) );
+
+	remove_menu_page( 'edit-comments.php' );
+	remove_submenu_page( 'options-general.php', 'options-discussion.php' );
+}
+
+function filter_dashboard(){
+	remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
+}
+
+function hide_dashboard_bits(){
+	$obj = get_current_screen();
+	var_dump($obj);
+	if( 'dashboard' == $obj->id )
+		add_action( 'admin_print_footer_scripts', array( $this, 'dashboard_js' ) );
+}
  
 /**
  * Custom Post Type Archive link support for the menu.
  *
+ 
 add_filter('wp_list_pages', 'new_nav_menu_items');
 add_filter('wp_nav_menu_items', 'new_nav_menu_items');
 function new_nav_menu_items($items) {
