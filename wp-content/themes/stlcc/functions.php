@@ -296,3 +296,19 @@ $GLOBALS['posttypelinks'][] = array(
 	'slug' => $slug
 );*/
 
+/*
+	Custom Taxonomy
+	
+*/
+
+function stlcc_custom_taxonomies() {
+	register_taxonomy(
+		'campus','faculty',
+		array(
+		'label' => 'Campus',
+		'rewrite' => array( 'slug' => 'campus'),
+		'hierarchical' => true
+		)
+	);
+}
+add_action ('init', 'stlcc_custom_taxonomies');
