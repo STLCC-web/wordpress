@@ -243,7 +243,7 @@ function stlcc_posts_for_current_contributor() {
 /*
 	*
 	* Nuova rimuovi commenti
-	*/
+	
  
 add_action( 'admin_menu', 'stlcc_remove',9999 );	// do this as late as possible
 function stlcc_remove() {
