@@ -302,6 +302,25 @@ $GLOBALS['posttypelinks'][] = array(
 */
 
 function stlcc_custom_taxonomies() {
+	$labels = array(
+		'name' => 'Campus',
+		'singular_name' => 'Campus',
+		'search_items' => 'Search Campus',
+		'parent_item' => 'Parent Campus',
+		'menu_name' => 'Campus'		
+	);
+	
+	$args = array (
+		'hierarchical' => true,
+		'labels' => $labels,
+		'show_ui' => true,
+		'show_admin_column' => true,
+		'query_var' => true,
+		'rewrite' => array('slug' => 'campus')
+	);
+	
+	register_taxonomy('campus', array('faculty'), $args);
+	/*
 	register_taxonomy(
 		'campus','faculty',
 		array(
@@ -309,6 +328,6 @@ function stlcc_custom_taxonomies() {
 		'rewrite' => array( 'slug' => 'campus'),
 		'hierarchical' => true
 		)
-	);
+	);*/
 }
 add_action ('init', 'stlcc_custom_taxonomies');

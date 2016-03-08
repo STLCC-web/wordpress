@@ -528,6 +528,138 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+#site-navigation{
+background-clip: border-box;
+background-color: transparent;
+background-image: none;
+background-origin: padding-box;
+background-position: 0% 0%;
+background-repeat: repeat;
+background-size: auto auto;
+border-bottom-color: #555;
+border-bottom-style: none;
+border-bottom-width: 0px;
+border-image-outset: 0 0 0 0;
+border-image-repeat: stretch stretch;
+border-image-slice: 100% 100% 100% 100%;
+border-image-source: none;
+border-image-width: 1 1 1 1;
+border-left-color: #555;
+border-left-style: none;
+border-left-width: 0px;
+border-right-color: #555;
+border-right-style: none;
+border-right-width: 0px;
+border-top-color: #555;
+border-top-style: none;
+border-top-width: 0px;
+color: #555;
+font-kerning: auto;
+line-height: 16.8px;
+list-style-position: outside;
+list-style-type: none;
+margin-bottom: 0px;
+margin-left: 0px;
+margin-right: 126px;
+margin-top: 0px;
+outline-color: #555;
+outline-style: none;
+outline-width: 0px;
+padding-bottom: 0px;
+padding-left: 0px;
+padding-right: 0px;
+padding-top: 0px;
+position: relative;
+vertical-align: baseline;
+width: 681.367px;
+word-wrap: break-word;
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
+-moz-border-right-colors: none;
+-moz-border-top-colors: none;
+
+}
+
+.menu-item a {
+	
+background-attachment: scroll;
+background-clip: border-box;
+background-color: transparent;
+background-image: none;
+background-origin: padding-box;
+background-position: 0% 0%;
+background-repeat: repeat;
+background-size: auto auto;
+border-bottom-color: #666;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+border-bottom-style: none;
+border-bottom-width: 0px;
+border-image-outset: 0 0 0 0;
+border-image-repeat: stretch stretch;
+border-image-slice: 100% 100% 100% 100%;
+border-image-source: none;
+border-image-width: 1 1 1 1;
+border-left-color: #666;
+border-left-style: none;
+border-left-width: 0px;
+border-right-color: #666;
+border-right-style: none;
+border-right-width: 0px;
+border-top-color: #666;
+border-top-left-radius: 0px;
+border-top-right-radius: 0px;
+border-top-style: none;
+border-top-width: 0px;
+color: #666;
+display: block;
+font-feature-settings: normal;
+font-kerning: auto;
+font-language-override: normal;
+font-size: 14px;
+font-size-adjust: none;
+font-stretch: normal;
+font-style: normal;
+font-synthesis: weight style;
+font-variant: normal;
+font-variant-alternates: normal;
+font-variant-caps: normal;
+font-variant-east-asian: normal;
+font-variant-ligatures: normal;
+font-variant-numeric: normal;
+font-variant-position: normal;
+line-height: 16.8px;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: none;
+margin-bottom: 0px;
+margin-left: 0px;
+margin-right: 0px;
+margin-top: 0px;
+outline-color: #666;
+outline-style: none;
+outline-width: 0px;
+padding-bottom: 14px;
+padding-left: 14px;
+padding-right: 14px;
+padding-top: 14px;
+text-decoration: none;
+text-decoration-color: #666;
+text-decoration-line: none;
+text-decoration-style: solid;
+vertical-align: baseline;
+word-wrap: break-word;
+-moz-border-bottom-colors: none;
+-moz-border-left-colors: none;
+-moz-border-right-colors: none;
+-moz-border-top-colors: none;
+
+}
+
+.main-navigation{
+	
+}
+
 /*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
