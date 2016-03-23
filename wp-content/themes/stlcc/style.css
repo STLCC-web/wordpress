@@ -529,6 +529,15 @@ textarea {
 # Navigation
 --------------------------------------------------------------*/
 #site-navigation{
+	/* fixed -sticky */
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	border-top: 0;
+/*rest*/    
+box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
 background-clip: border-box;
 background-color: transparent;
 background-image: none;
