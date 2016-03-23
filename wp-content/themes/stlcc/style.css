@@ -772,6 +772,7 @@ a:active {
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
+	line-height: 2;
 }
 
 @media screen and (min-width: 37.5em) {
