@@ -123,6 +123,11 @@ function stlcc_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+	
+	wp_deregister_script( 'jquery' );
+	$jquery_cdn = '//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js';
+	wp_enqueue_script( 'jquery', $jquery_cdn, array(), '20130115', true );
+	
 }
 add_action( 'wp_enqueue_scripts', 'stlcc_scripts' );
 
