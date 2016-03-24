@@ -302,6 +302,18 @@ $GLOBALS['posttypelinks'][] = array(
 );*/
 
 /*
+	Custom JS
+	
+*/
+add_action( 'wp_enqueue_scripts', 'add_stlcc_script' );
+function add_stlcc_script() {
+    wp_enqueue_script(
+        'stlcc_js', // name your script so that you can attach other scripts and de-register, etc.
+        get_template_directory_uri() . '/js/stlcc.js', // this is the location of your script file
+        array('jquery') // this array lists the scripts upon which your script depends
+    );
+}
+/*
 	Custom Taxonomy
 	
 */

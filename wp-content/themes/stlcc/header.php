@@ -42,9 +42,9 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle wp-menu-image" aria-controls="primary-menu" aria-expanded="false" autofocus="autofocus">
+			<button class="menu-toggle wp-menu-image" aria-controls="primary-menu" aria-expanded="false" >
 			
-				<span class="dashicons dashicons-menu"></span> 
+				<span class="mymenu">a</span> 
 				
 				<?php //esc_html_e( 'Primary Menu', 'stlcc' ); ?>
 				
