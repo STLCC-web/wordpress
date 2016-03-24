@@ -580,7 +580,7 @@ padding-right: 0px;
 padding-top: 0px;
 position: relative;
 vertical-align: baseline;
-width: 681.367px;
+/*width: 681.367px;*/
 word-wrap: break-word;
 -moz-border-bottom-colors: none;
 -moz-border-left-colors: none;
@@ -778,10 +778,18 @@ a:active {
 }
 
 /* Small menu. */
+
+	
+.mymenu
+{
+	background: url(menu.svg);
+}
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
-	line-height: 2;
+	line-height: 2;	
+		float:right;
+
 }
 
 @media screen and (min-width: 37.5em) {
@@ -790,6 +798,8 @@ a:active {
 	}
 	.main-navigation ul {
 		display: block;
+		float:left;
+
 	}
 }
 
