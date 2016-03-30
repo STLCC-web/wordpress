@@ -547,7 +547,8 @@ textarea {
 
 }
 
-#masthead a:hover {
+#masthead a:hover 
+{
 	color: #F4ED7C;
 
 }
@@ -566,7 +567,8 @@ textarea {
   transition: all 0.4s ease;
 }
 
-nav{
+nav
+{
   text-align: center;
   font-size: 72px;
   line-height: 108px;
@@ -575,26 +577,23 @@ nav{
 
 }
 
-svg {
+svg 
+{
 	fill: currentColor;
 	stroke: currentColor;
 }
 
 #menu-icon
 {
-	fill: currentColor;
-	width=36px;
-	height=36px;
+	stroke: white;
+	/*width:36px;
+	height:36px;*/
 	float:right;
 }
 
 #menu-icon:hover
 {
-	stroke: 
-
-	width="36";
-	height="36";
-	float:right;
+	stroke: #F4ED7C;
 }
 
 
@@ -612,7 +611,6 @@ svg {
 }
 
 #site-navigation{
-		color: blue;
 
 	  transition: all 0.4s ease;
 	/* fixed -sticky 
