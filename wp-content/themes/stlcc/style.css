@@ -537,6 +537,18 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
+/* test for jsfiddle menu http://jsfiddle.net/fL7xmf3f/
+	#primary-menu {
+	position: absolute;
+    float: left;
+    top: 0;
+    left: -240px;
+    width: 240px;
+    height: 480px;
+    
+}
+*/
+
 #masthead a {
 	color: white;
 ;
