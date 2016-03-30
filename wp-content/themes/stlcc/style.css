@@ -586,14 +586,17 @@ svg
 #menu-icon
 {
 	stroke: white;
-	/*width:36px;
-	height:36px;*/
+	width:36px;
+	height:36px;
 	float:right;
+
 }
 
 .menu-toggle:hover > #menu-icon 
 { 	
 	stroke:#F4ED7C;
+	text-shadow:5px 5px 5px black;
+
 }
 
 
@@ -861,14 +864,6 @@ a:active {
 .main-navigation .current-menu-ancestor > a {
 }
 
-/* Small menu. */
-
-	
-.mymenu
-{
-	background: url(menu.svg);
-}
-
 /* Remove Aweful Button Style */
 .menu-toggle
 {
@@ -884,7 +879,7 @@ a:active {
 	box-shadow: none;
 	border:none;
 	-webkit-appearance: none;
-	text-shadow:1px 0px 0px black;
+	text-shadow:10px 10px 10px black;
 }
 /* Remove Aweful Button Style */
 
