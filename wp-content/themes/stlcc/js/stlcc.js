@@ -12,3 +12,24 @@ if ($(this).scrollTop() > 1){
     $('#masthead').removeClass("sticky");
   }
 });
+
+
+/*
+	$.fn.toggleClick=function(){
+    	var functions=arguments, iteration=0
+    	return this.click(function(){
+    		functions[iteration].apply(this,arguments)
+    		iteration= (iteration+1) %functions.length
+    	})
+    }
+    
+    
+     $('#accountImageMobile').toggleClick(function () {
+
+			 	$('#over-menu').animate({ left: '0' }, 400,'swing');
+     		$('#content').animate({ left: '240px' }, 400,'swing');    
+     }, function () {
+  			$('#over-menu').animate({ left: '-240px' }, 400,'swing');
+     		$('#content').animate({ left: '0' }, 400,'swing');
+    });
+*/

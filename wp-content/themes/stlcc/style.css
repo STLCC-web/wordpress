@@ -47,6 +47,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+
+
+
 html {
 	font-family: 'Fira Sans', sans-serif;
 	/*font-family: sans-serif;*/
@@ -60,11 +63,14 @@ html {
 	/*min-width: 400px; */
 	margin: 0 auto;
 	/*min-width: 600px;*/
+	width: 600px;
 	display: inline-block;
+	text-align: left;
 }
 
 body {
 	margin: 0;
+	  text-align: center;
 }
 
 article,
@@ -537,17 +543,41 @@ textarea {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-/* test for jsfiddle menu http://jsfiddle.net/fL7xmf3f/
-	#primary-menu {
+ /* test for jsfiddle menu http://jsfiddle.net/fL7xmf3f/
+	 */
+#primary-menu {
+	background: #333 none repeat scroll 0% 0%;
 	position: absolute;
-    float: left;
+	left:0%;
     top: 0;
     left: -240px;
     width: 240px;
     height: 480px;
     
 }
-*/
+
+#page
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+li::after {
+	color: rgba(255, 255, 255, 0.6);
+	list-style: outside none none;
+	width: auto;
+	margin-left: 20px;
+	position: relative;
+	left: auto;
+	content: "";
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	display: block;
+}
 
 #masthead a {
 	color: white;
