@@ -591,9 +591,9 @@ svg
 	float:right;
 }
 
-#menu-icon:hover
-{
-	stroke: #F4ED7C;
+.menu-toggle:hover > #menu-icon 
+{ 	
+	stroke:#F4ED7C;
 }
 
 
