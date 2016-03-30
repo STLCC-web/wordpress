@@ -550,9 +550,11 @@ textarea {
 	position: absolute;
 	left:0%;
     top: 0;
+    bottom:0;
     left: -240px;
     width: 240px;
-    height: 480px;
+    /*height: 200%;*/
+    z-index:500;
     
 }
 
@@ -566,7 +568,49 @@ textarea {
     z-index: -1;
 }
 
+.main-navigation li 
+{
+	display:block;
+}
+
 li::after {
+	border-bottom-color: rgba(0, 0, 0, 0.15);
+border-bottom-style: solid;
+border-bottom-width: 1px;
+border-left-color: rgba(0, 0, 0, 0.15);
+border-right-color: rgba(0, 0, 0, 0.15);
+border-top-color: rgba(0, 0, 0, 0.15);
+bottom: 0px;
+color: rgba(255, 255, 255, 0.6);
+content: "";
+display: block;
+font-family: "Verb";
+font-feature-settings: normal;
+font-kerning: auto;
+font-language-override: normal;
+font-size: 14px;
+font-size-adjust: none;
+font-stretch: normal;
+font-style: normal;
+font-synthesis: weight style;
+font-variant: normal;
+font-variant-alternates: normal;
+font-variant-caps: normal;
+font-variant-east-asian: normal;
+font-variant-ligatures: normal;
+font-variant-numeric: normal;
+font-variant-position: normal;
+font-weight: 400;
+left: auto;
+line-height: 20px;
+list-style-image: none;
+list-style-position: outside;
+list-style-type: none;
+margin-left: 20px;
+position: relative;
+width: auto;
+
+	/*
 	color: rgba(255, 255, 255, 0.6);
 	list-style: outside none none;
 	width: auto;
@@ -576,7 +620,7 @@ li::after {
 	content: "";
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
-	display: block;
+	display: block;*/
 }
 
 #masthead a {
@@ -847,8 +891,8 @@ a:active {
 }
 
 .main-navigation li {
-	float: left;
-	position: relative;
+	/*float: left;
+	position: relative;*/
 }
 
 .main-navigation a {
