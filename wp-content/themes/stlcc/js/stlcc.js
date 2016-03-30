@@ -6,9 +6,9 @@ jQuery(document).ready(function($) {
 
 jQuery(window).scroll(function() {
 if ($(this).scrollTop() > 1){  
-    $('nav').addClass("sticky");
+    $('#masthead').addClass("sticky");
   }
   else{
-    $('nav').removeClass("sticky");
+    $('#masthead').removeClass("sticky");
   }
 });

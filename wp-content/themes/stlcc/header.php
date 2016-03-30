@@ -44,7 +44,15 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle wp-menu-image" aria-controls="primary-menu" aria-expanded="false" >
 			
-				<span class="mymenu">a</span> 
+				<svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+				<style>.a{fill:none;stroke-width:5;stroke:#FFF;}
+				</style>
+				<path d="M2 18.5h31H2z" class="a"/>
+				<path d="M2 7.5h31H2z" class="a"/>
+				<path d="M2 28.5h31H2z" class="a"/>
+				</svg>
+				
+				<!-- <object id="menu-icon" type="image/svg+xml"  data="/wp-content/themes/stlcc/menu.svg"></object> -->
 				
 				<?php //esc_html_e( 'Primary Menu', 'stlcc' ); ?>
 				
