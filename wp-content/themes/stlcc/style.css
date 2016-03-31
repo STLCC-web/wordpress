@@ -974,8 +974,8 @@ a:active {
 .main-navigation.toggled ul {
 	display: block;
 	line-height: 2;	
-	float:right;
-	/*
+	/*float:right;
+	
 	background:none;
 	border:none;
 	line-style:none;
