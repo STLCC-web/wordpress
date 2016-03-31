@@ -35,14 +35,14 @@
 			container.className = container.className.replace( ' toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
 			menu.setAttribute( 'aria-expanded', 'false' );
-			$('#primary-menu').animate({ left: '-240px' }, 400,'swing');
-     		$('#page').animate({ left: '0' }, 400,'swing');
+			/*$('#primary-menu').animate({ left: '-240px' }, 400,'swing');
+     		$('#page').animate({ left: '0' }, 400,'swing');*/
 		} else {
 			container.className += ' toggled';
 			button.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
-			$('#primary-menu').animate({ left: '0' }, 400,'swing');
-     		$('#page').animate({ left: '240px' }, 400,'swing');
+			/*$('#primary-menu').animate({ left: '0' }, 400,'swing');
+     		$('#page').animate({ left: '240px' }, 400,'swing');*/
 		}
 	};
 
