@@ -32,7 +32,7 @@
 
 	button.onclick = function() {
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-			$('#primary-menu').animate({ left: '-240px' }, 400,'swing');
+			$('#primary-menu').animate({ left: '-320px' }, 400,'swing');
      		$('#page').animate({ left: '0' }, 400,'swing');
      		$('#page').promise().done(function(){
 				container.className = container.className.replace( ' toggled', '' );
@@ -45,7 +45,7 @@
 			button.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
 			$('#primary-menu').animate({ left: '0' }, 400,'swing');
-     		$('#page').animate({ left: '240px' }, 400,'swing');
+     		$('#page').animate({ left: '320px' }, 400,'swing');
 		}
 	};
 
