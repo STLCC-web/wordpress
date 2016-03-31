@@ -5,8 +5,10 @@
  * navigation support for dropdown menus.
  */
 ( function() {
-	var container, button, menu, links, subMenus, i, len;
+	var container, button, menu, links, subMenus, i, len, myMenu, page;
 
+	myMenu = document.getElementById( 'primary-menu' );
+	page = document.getElementById( 'page' );
 	container = document.getElementById( 'site-navigation' );
 	if ( ! container ) {
 		return;
@@ -32,20 +34,27 @@
 
 	button.onclick = function() {
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
+			/*
+				
 			$('#primary-menu').animate({ left: '-320px' }, 400,'swing');
      		$('#page').animate({ left: '0' }, 400,'swing');
-     		$('#page').promise().done(function(){
+     		$('#page').promise().done(function(){*/
+	     		
 				container.className = container.className.replace( ' toggled', '' );
+				page.className = page.className.replace( ' toggled', '' );
+				myMenu.className = myMenu.className.replace( ' toggled', '' );
 				button.setAttribute( 'aria-expanded', 'false' );
 				menu.setAttribute( 'aria-expanded', 'false' );
-			});
+			//});
 			
 		} else {
+			myMenu.className += ' toggled';
+			page.className += ' toggled';
 			container.className += ' toggled';
 			button.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
-			$('#primary-menu').animate({ left: '0' }, 400,'swing');
-     		$('#page').animate({ left: '320px' }, 400,'swing');
+			//$('#primary-menu').animate({ left: '0' }, 400,'swing');
+     		//$('#page').animate({ left: '320px' }, 400,'swing');
 		}
 	};
 
