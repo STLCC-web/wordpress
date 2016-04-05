@@ -12,5 +12,7 @@
 	<line x1="21.3" y1="20.9" x2="32.6" y2="32.3" stroke-linecap="round" class="a"/>
 </svg> Search</button>
 
-	<?php //<input type="submit" class="search-submit" value="Search" /> ?>
+	<?php //<input type="submit" class="search-submit" value="Search" /> 
+		/* check this out: https://jsfiddle.net/XPYWB/631/ */
+	?>
 </form>
