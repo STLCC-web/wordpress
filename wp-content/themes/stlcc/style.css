@@ -617,23 +617,27 @@ svg
 
 }
 
-#menu-icon
+.menu-icon
 {
 	stroke: white;
-	width:36px;
-	height:36px;
+	/*width:36px;
+	height:36px;*/
 	float:right;
 	transition: all 0.4s ease;
 
 }
 
-.menu-toggle:hover > #menu-icon 
+.menu-toggle:hover > .menu-icon 
 { 	
 	stroke:#F4ED7C;
 	text-shadow:5px 5px 5px black;
 
 }
 
+#masthead{
+	position: fixed;
+	z-index: 100;
+}
 
 .sticky {
 	/*
@@ -649,6 +653,8 @@ svg
 }
 
 #site-navigation{
+	position:relative;
+	z-index:100;
 
 	  transition: all 0.4s ease;
 	/* fixed -sticky 
@@ -699,7 +705,6 @@ padding-bottom: 0px;
 padding-left: 0px;
 padding-right: 0px;
 padding-top: 0px;
-position: relative;
 vertical-align: baseline;
 /*width: 681.367px;*/
 word-wrap: break-word;
@@ -1018,7 +1023,42 @@ main-navigation.toggled ul :hover
 	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
 }*/
 
+#archive
+{
+	display:block;
+	position: relative;
+	overflow:auto;
+	z-index:0;
+}
+
+#archive .faculty
+{
+	position:relative;
+	float:left;
+	display: inline;
+	width:200px;
+	height: 200px;
+	overflow:hidden;
+}
+
+#archive .faculty img
+{
+	width:60px;
+	height:60px;
+	overflow:hidden;
+}
+
 @media screen and (min-width: 47em) {
+	
+	#content
+	{
+		width: 47em;
+	}
+	
+	.wp-post-image
+	{
+		/*width:100%;*/
+	}
 	
 	.main-navigation .toggled li::after {
 		border-bottom-color: none;

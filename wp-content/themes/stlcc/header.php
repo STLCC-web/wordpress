@@ -44,7 +44,7 @@
 		<nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle wp-menu-image" aria-controls="primary-menu" aria-expanded="false" >
 			
-				<svg id="menu-icon" height="36" width="36" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
+				<svg class="menu-icon" height="36" width="36" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36">
 				<style>.a{fill:none;stroke-width:5;}
 				</style>
 				<path d="M2 18.5h31H2z" class="a"/>

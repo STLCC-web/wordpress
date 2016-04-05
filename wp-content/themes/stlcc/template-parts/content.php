@@ -6,7 +6,7 @@
  *
  * @package STLCC
  */
-
+//  /echo "Jacopo Was Here";
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -36,11 +36,12 @@
 			</div>
 
 			<?php endif; 
+				the_excerpt();
 				
-			the_content( sprintf(
+			/*the_content( sprintf(
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'stlcc' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
-			) );
+			) );*/
 
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'stlcc' ),
