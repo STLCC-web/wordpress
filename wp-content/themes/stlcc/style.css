@@ -652,9 +652,21 @@ svg
 
 }
 
+.xyz 
+{
+	display: inline;
+	background: aqua;
+}
+
 .widget-title
 {
 	display:none;
+}
+
+button .search-submit
+{
+	display: inline;
+	background: aqua;
 }
 
 
