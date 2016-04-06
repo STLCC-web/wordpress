@@ -652,6 +652,12 @@ svg
 
 }
 
+.widget-title
+{
+	display:none;
+}
+
+
 #site-navigation{
 	position:relative;
 	z-index:100;

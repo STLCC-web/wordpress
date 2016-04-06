@@ -302,6 +302,21 @@ $GLOBALS['posttypelinks'][] = array(
 );*/
 
 /*
+	Add Widget Area
+	
+*/
+if ( function_exists('register_sidebar') )
+  register_sidebar(array(
+    'id' => 'search_in_menu',
+    'name' => 'search_in_menu',
+    'before_widget' => '<div class = "widgetizedArea">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3 class="widget-title">',
+    'after_title' => '</h3>',
+  )
+);
+
+/*
 	Custom JS
 	
 */

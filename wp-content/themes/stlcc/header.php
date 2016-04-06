@@ -52,12 +52,12 @@
 				<path d="M2 28.5h31H2z" class="a"/>
 				</svg>
 				
-				<!-- <object id="menu-icon" type="image/svg+xml"  data="/wp-content/themes/stlcc/menu.svg"></object> -->
-				
 				<?php //esc_html_e( 'Primary Menu', 'stlcc' ); ?>
 				
 			</button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+			<?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("search_in_menu") ) : ?>
+			<?php endif;?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
