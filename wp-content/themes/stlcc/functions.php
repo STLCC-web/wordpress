@@ -115,6 +115,9 @@ add_action( 'widgets_init', 'stlcc_widgets_init' );
  */
 function stlcc_scripts() {
 	wp_enqueue_style( 'stlcc-style', get_stylesheet_uri() );
+	
+	// Add Google Fonts
+		wp_enqueue_style( 'stlcc-google-font', 'https://fonts.googleapis.com/css?family=Fira+Sans:400,500,300');
 
 	wp_enqueue_script( 'stlcc-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 

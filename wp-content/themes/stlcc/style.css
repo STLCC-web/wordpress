@@ -1,9 +1,9 @@
 /*
 Theme Name: STLCC
-Theme URI: http://underscores.me/
-Author: Underscores.me
-Author URI: http://underscores.me/
-Description: Description
+Theme URI: https://github.com/STLCC-web/wordpress
+Author: Jacopo Mazzoni
+Author URI: http://jacopoart.com/
+Description: A custom Theme for the STLCC Art Department.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -323,6 +323,8 @@ h3,
 h4,
 h5,
 h6 {
+		font-family: 'Fira Sans', sans-serif;
+
 	clear: both;
 }
 

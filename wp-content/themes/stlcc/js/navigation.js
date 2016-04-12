@@ -65,6 +65,7 @@
 	// Set menu items with submenus to aria-haspopup="true".
 	for ( i = 0, len = subMenus.length; i < len; i++ ) {
 		subMenus[i].parentNode.setAttribute( 'aria-haspopup', 'true' );
+		
 	}
 
 	// Each time a menu link is focused or blurred, toggle focus.
