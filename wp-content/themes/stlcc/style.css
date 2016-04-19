@@ -571,6 +571,9 @@ textarea {
  /* test for jsfiddle menu http://jsfiddle.net/fL7xmf3f/
 	 */
 
+.sub-menu {
+	background-color: #006B3F;
+}
 #masthead a {
 	color: white;
 ;
@@ -953,7 +956,7 @@ a:active {
 	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
 	float: left;
 	position: absolute;
-	top: 1.5em;
+	top: 2.6em;
 	left: -999em;
 	z-index: 99999;
 }
