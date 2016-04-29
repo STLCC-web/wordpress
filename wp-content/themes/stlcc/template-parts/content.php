@@ -6,7 +6,8 @@
  *
  * @package STLCC
  */
-//  /echo "Jacopo Was Here";
+
+echo "jacopo was here maybe";
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

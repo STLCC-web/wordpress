@@ -205,6 +205,52 @@ function stlcc_faculty_post_type() {
 }
 
 add_action('init', 'stlcc_faculty_post_type');
+/**
+ * Custom Post Type support for this theme.
+ */
+function stlcc_news_post_type() {
+    $lables = array(
+        'name' => 'News',
+        'singular_name' => 'News Item',
+        'add_new' => 'Add New',
+        'all_items' => 'All News',
+        'add_new_item' => 'Add News Item',
+        'edit_item' => 'Edit News Item',
+        'new_item' => 'New News Item',
+        'view_item' => 'View News Item',
+        'search_item' => 'Search News',
+        'not_found' => 'No News Items Found',
+        'not_found_in_trash' => 'No News Items Found in Trash',
+        'parent_item_colon' => 'Parent News Item'
+    );
+    
+    $args = array(
+        'labels' => $lables,
+        'public' => true,
+        'has_archive' => true,
+        'publicly_queryable' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'menu_icon' => 'dashicons-megaphone',
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+            'revision'
+            ),
+         'taxonomies' => array (
+             'menu_position' => 5,
+             'exclude_from_search' => false         
+         )
+    );
+    
+    register_post_type('News', $args);
+}
+
+add_action('init', 'stlcc_news_post_type');
 
 
 /**
@@ -309,6 +355,7 @@ $GLOBALS['posttypelinks'][] = array(
 	
 */
 if ( function_exists('register_sidebar') )
+{
   register_sidebar(array(
     'id' => 'search_in_menu',
     'name' => 'search_in_menu',
@@ -318,6 +365,7 @@ if ( function_exists('register_sidebar') )
     'after_title' => '</h3>',
   )
 );
+}
 
 /*
 	Custom JS
@@ -364,5 +412,10 @@ function stlcc_custom_taxonomies() {
 		'hierarchical' => true
 		)
 	);*/
+        
 }
 add_action ('init', 'stlcc_custom_taxonomies');
+
+/**
+ * tst
+ */

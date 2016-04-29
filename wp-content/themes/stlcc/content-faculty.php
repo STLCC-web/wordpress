@@ -7,6 +7,7 @@
  * @package STLCC
  */
 
+echo "hello jacopo maybe";
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -36,7 +37,8 @@
 			</div>
 
 			<?php endif; 
-				
+                        
+                        the_excerpt('<h2 class="title">','</h2>');	
 			the_content( sprintf(
 				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'stlcc' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
@@ -47,6 +49,8 @@
 				'after'  => '</div>',
 			) );
 		?>
+            
+        </div><!-- .entry-ex -->
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
