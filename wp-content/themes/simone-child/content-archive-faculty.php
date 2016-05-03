@@ -11,7 +11,7 @@
             echo '<div class="front-index-thumbnail clear">';
             echo '<div class="image-shifter">';
             echo '<a href="' . get_permalink() . '" title="' . __('Read ', 'simone') . get_the_title() . '" rel="bookmark">';
-            the_post_thumbnail();
+            the_post_thumbnail('stlcc-custom-size');
             echo '</a>';
             echo '</div>';
             echo '</div>';
@@ -24,7 +24,7 @@
         if (has_post_thumbnail()) {
             echo '<div class="small-index-thumbnail clear">';
             echo '<a href="' . get_permalink() . '" title="' . __('Read ', 'simone') . get_the_title() . '" rel="bookmark">';
-            echo the_post_thumbnail('index-thumb');
+            echo the_post_thumbnail('stlcc-custom-size');
             echo '</a>';
             echo '</div>';
         }
