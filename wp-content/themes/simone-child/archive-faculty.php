@@ -10,7 +10,7 @@
 get_header(); ?>
 
 	<section id="primary" class="content-area">
-		<main id="main" class="site-main" role="main">
+		<main id="main" class="site-main fac-arc" role="main">
 
 		<?php if ( have_posts() ) : ?>
 
@@ -55,27 +55,22 @@ get_header(); ?>
 					endif;
 				?>
 			</header><!-- .page-header -->
-
-                        <?php
-                        if ( is_author() && get_the_author_meta( 'description' ) ) {
-                            echo '<div class="author-index shorter">';
-                            get_template_part('inc/author','box');
-                            echo '</div>';
-                        }
-                        ?>
-
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', 'archive-faculty' );
-				?>
-
-			<?php endwhile; ?>
+			
+			<!-- BEGIN TEST -->
+		<div class="fac-arc">
+  <div class="flex-container">
+   <?php 
+	    while ( have_posts() ) : the_post(); 
+				/* Include the Post-Format-specific template for the content.
+				 * If you want to override this in a child theme, then include a file
+				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
+				 */
+				get_template_part( 'content', 'archive-faculty' );
+		endwhile; ?>
+   
+  </div>
+</div>
+		<!-- END TEST -->
 
 			<?php simone_paging_nav(); ?>
 

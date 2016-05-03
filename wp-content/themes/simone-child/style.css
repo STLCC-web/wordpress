@@ -37,6 +37,73 @@ and Blueprint http://www.blueprintcss.org/
     font-size: 1.8rem;
 }
 
+/* BEGIN TEST */
+/*reference: http://www.sitepoint.com/using-modern-css-to-build-a-responsive-image-grid/ */
+
+.fac-arc {
+  width: 80%;
+  margin: 30px auto;
+  font-family: sans-serif;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+a.post {
+  display: inline-block;
+  margin-bottom: 8px;
+  width: calc(50% - 4px);
+  margin-right: 8px;
+  text-decoration: none;
+  color: black;
+}
+
+a.post:nth-of-type(2n) {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 50em) {
+  a.post {
+    width: calc(25% - 6px);
+  }
+  a.post:nth-of-type(2n) {
+    margin-right: 8px;
+  }
+  a:nth-of-type(4n) {
+    margin-right: 0;
+  }
+}
+
+figure {
+  margin: 0;
+  overflow: hidden;
+}
+
+figcaption {
+  margin-top: 15px;
+}
+
+img {
+  border: none;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  background: #ccc;
+  transition: transform .2s ease-in-out;
+}
+
+
+/*
+a:hover img {
+  transform: scale(1.15);
+}
+*/
+
+/* END TEST */
+
 /*
 .faculty-position
 {
