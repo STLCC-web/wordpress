@@ -32,7 +32,10 @@ function add_stlcc_script() {
     );
 }
 
-
+add_action( 'after_setup_theme', 'stlcc_set_custom_thumb_size' );
+function stlcc_set_custom_thumb_size() {
+	add_image_size( 'stlcc-custom-size', 160, 160, true ); // 160 pixels wide by 160 pixels tall, hard crop mode
+}
 /**
  * Implement the News CPT feature.
  */
@@ -42,9 +45,21 @@ require get_stylesheet_directory() . '/CPT/stlcc_news.php';
  * Implement the Faculty CPT feature.
  */
 require get_stylesheet_directory() . '/CPT/stlcc_faculty.php';
+
+/**
+ * Implement the Gallery Image CPT feature.
+ */
+require get_stylesheet_directory() . '/CPT/stlcc_gallery_image.php';
+
+/**
+ * Implement the Department CPT feature.
+ */
+require get_stylesheet_directory() . '/CPT/stlcc_department.php';
+
+
 /**
  * Implement the Faculty CPT feature.
  */
-require get_stylesheet_directory() . '/cpt-events.php';
+//require get_stylesheet_directory() . '/cpt-events.php';
 
 ?>

@@ -42,9 +42,36 @@
                     <?php edit_post_link( __( 'Edit', 'simone' ), '<span class="edit-link">', '</span>' ); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
+    <?php 
+    if (get_field('faculty_position'))
+    {
+        echo '<div class="faculty-position">';
+        echo '<h1>' . get_field('faculty_position') . '</h1>';
+        
+        if (get_field('faculty_area'))
+        {
+            echo '<p>' . get_field('faculty_area') . '</p>';
+        }
+
+        if (get_field('faculty_e-mail'))
+        {
+            echo '<p>' . get_field('faculty_e-mail') . '</p>';
+        }
+
+        if (get_field('faculty_phone_number'))
+        {
+            echo '<p>' . get_field('faculty_phone_number') . '</p>';
+        }
+
+        echo '</div>';
+
+    }
+    ?>
+
 
 	<div class="entry-content">
 		<?php the_content(); ?>
+
 		<?php
 			wp_link_pages( array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'simone' ),
