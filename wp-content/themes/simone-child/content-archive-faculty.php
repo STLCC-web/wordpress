@@ -11,7 +11,7 @@
             echo '<div class="front-index-thumbnail clear">';
             echo '<div class="image-shifter">';
             echo '<a href="' . get_permalink() . '" title="' . __('Read ', 'simone') . get_the_title() . '" rel="bookmark">';
-            the_post_thumbnail('stlcc-custom-size');
+            the_post_thumbnail();
             echo '</a>';
             echo '</div>';
             echo '</div>';
@@ -46,7 +46,7 @@
                     echo '<div class="category-list">' . $category_list . '</div>';
                 }
             ?>
-		<h1 class="entry-title"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
+		<h1 class="entry-title faculty"><a href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 		<div class="entry-meta">
@@ -79,18 +79,24 @@
                 if ( $simone_archive_content == 'content' ) {
                     the_content( __( '', 'simone' ) );
                 } else {
-                    the_excerpt();
-                }
+                    //the_excerpt();
+                    echo '<p class="faculty-info">';
+
+                    if (get_field('faculty_area'))
+                    {
+                        echo get_field('faculty_area') . ' ';
+                    }
+
+                    if (get_field('faculty_position'))
+                    {
+                        echo  get_field('faculty_position');
+                    }
+
+                    echo '</p>';
+                            }
                 ?>
             </div><!-- .entry-content -->
-            <footer class="entry-footer continue-reading">
-		<?php
-                if ( $simone_archive_content == 'content' ) {
-                    echo '<a href="' . get_permalink() . '" title="' . _x('Read ', 'First part of "Read *article title* in title tag of Read more link', 'simone') . get_the_title() . '" rel="bookmark">' . __('Read <span aria-hidden="true">the article</span>', 'simone') . '<i class="fa fa-arrow-circle-o-right"></i><span class="screen-reader-text"> ' . get_the_title() . '</span></a>';
-                } else {
-                    echo '<a href="' . get_permalink() . '" title="' . __('Continue Reading ', 'simone') . get_the_title() . '" rel="bookmark">' . __('Continue Reading', 'simone') . '<i class="fa fa-arrow-circle-o-right"></i><span class="screen-reader-text"> ' . get_the_title() . '</span></a>';
-                }
-                ?>
+            <footer class="entry-footer">
             </footer><!-- .entry-footer -->
         <?php } ?>
 

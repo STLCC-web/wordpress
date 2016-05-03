@@ -26,6 +26,17 @@ and Blueprint http://www.blueprintcss.org/
 
 @import url("../simone/style.css");
 
+.entry-content
+{
+    margin: 0 auto;
+}
+
+.faculty
+{
+    /*font-weight: normal;*/
+    font-size: 1.8rem;
+}
+
 /*
 .faculty-position
 {
