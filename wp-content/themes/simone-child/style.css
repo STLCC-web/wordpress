@@ -52,7 +52,7 @@ and Blueprint http://www.blueprintcss.org/
   justify-content: space-between;
 }
 
-a.post {
+a .post {
   display: inline-block;
   margin-bottom: 8px;
   width: calc(50% - 4px);
@@ -61,12 +61,12 @@ a.post {
   color: black;
 }
 
-a.post:nth-of-type(2n) {
+a .post:nth-of-type(2n) {
   margin-right: 0;
 }
 
 @media screen and (min-width: 50em) {
-  a.post {
+  a .post {
     width: calc(25% - 6px);
   }
   a.post:nth-of-type(2n) {

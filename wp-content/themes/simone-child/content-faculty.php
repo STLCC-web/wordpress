@@ -9,19 +9,27 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
     <?php
-    if (has_post_thumbnail()) {
+    /*if (has_post_thumbnail()) {
         echo '<div class="single-post-thumbnail clear">';
         echo '<div class="image-shifter">';
         the_post_thumbnail();
         echo '</div>';
         echo '</div>';
-    }
+    }*/
     ?>
 
 	<header class="entry-header clear">
 
             <?php
-                /* translators: used between list items, there is a space after the comma */
+				if (has_post_thumbnail()) {
+			        //echo '<div class="single-post-thumbnail clear">';
+			        //echo '<div class="image-shifter">';
+			        echo the_post_thumbnail('stlcc-custom-size-single'). "\n";
+			        //the_post_thumbnail();
+			        //echo '</div>';
+			        //echo '</div>';
+			    }   
+		    	/* translators: used between list items, there is a space after the comma */
                 $category_list = get_the_category_list( __( ', ', 'simone' ) );
 
                 if ( simone_categorized_blog() ) {
